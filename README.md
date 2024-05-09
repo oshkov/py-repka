@@ -11,12 +11,12 @@
 
 * [Запуск](#Запуск)
 * [Методы](#Методы)
-    * [CheckUserRef](###CheckUserRef)
-    * [AddUserToRef](###AddUserToRef)
-    * [GetReferralUsers](###GetReferralUsers)
-    * [GetUserBalance](###GetUserBalance)
-    * [Purchase](###Purchase)
-    * [Replenishment](###Replenishment)
+    * [CheckUserRef](#CheckUserRef)
+    * [AddUserToRef](#AddUserToRef)
+    * [GetReferralUsers](#GetReferralUsers)
+    * [GetUserBalance](#GetUserBalance)
+    * [Purchase](#Purchase)
+    * [Replenishment](#Replenishment)
 * [Примеры](#Примеры)
 * [Заключение](#Заключение)
 
