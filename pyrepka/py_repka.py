@@ -2,7 +2,7 @@ import requests
 import json
 
 
-class pyRepka:
+class PyRepka:
     '''
     Этот класс предоставляет методы для взаимодействия с API реферальной программы "Репка".
 

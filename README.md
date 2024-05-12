@@ -1,4 +1,4 @@
-# <p align="center">pyRepka</p>
+# <p align="center">PyRepka</p>
 
 ### РЕПКА это:
 
@@ -28,13 +28,15 @@
 Установка через pip:
 
 ```python
-pip install pyRepka
+pip install pyrepka
 ```
 
 ### Инициализация:
 
 ```python
-py_repka = pyRepka(bot_access_token, bot_username, ip, port)
+from pyrepka import PyRepka
+
+py_repka = PyRepka(bot_access_token, bot_username, ip, port)
 ```
 
 | Параметр | Тип | Описание |
@@ -194,8 +196,10 @@ py_repka.replenishment(
 #### Пример запуска бота на aiogram 3
 
 ```python
+from pyrepka import PyRepka
+
 # Инициализация объекта реферальной программы
-py_repka = pyRepka(bot_access_token, bot_username, ip, port)
+py_repka = PyRepka(bot_access_token, bot_username, ip, port)
 
 
 @router.message(F.text.contains("/start"))
