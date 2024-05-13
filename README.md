@@ -115,7 +115,7 @@ GET-запрос
 #### Пример использования:
 
 ```python
-py_repka.add_user_to_ref(user_id)
+py_repka.get_referral_users(user_id)
 ```
 
 
