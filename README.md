@@ -201,7 +201,6 @@ from pyrepka import PyRepka
 # Инициализация объекта реферальной программы
 py_repka = PyRepka(bot_access_token, bot_username, ip, port)
 
-
 @router.message(F.text.contains("/start"))
 async def start_handler(message: Message):
 
@@ -222,9 +221,45 @@ async def start_handler(message: Message):
 ```
 
 
+---
+
+
+#### Пример оплаты чего-либо на aiogram 3
+
+```python
+from pyrepka import PyRepka
+
+# Инициализация объекта реферальной программы
+py_repka = PyRepka(bot_access_token, bot_username, ip, port)
+
+@router.callback_query(F.data.contains("/purchase"))
+async def purchase_handler(callback: CallbackQuery):
+
+    # Списывание средств баланса
+    response = py_repka.purchase(
+        callback.from_user.id,
+        config.PRICE,
+        messages.TEXT
+    )
+
+    # Проверка ответа на списывание средств с баланса
+    if response.status_code == 200:
+        # Вывод сообщения об успешном списании средств с баланса
+        await callback.answer(
+            messages.SUCCESS_PURCHASE,
+            show_alert=True
+        )
+
+    # В случае ошибки
+    else:
+        # Вывод сообщения о нехватке средств на балансе
+        await callback.answer(
+            messages.NO_MONEY,
+            show_alert=True
+        )
+```
+
 
 # Заключение
 
-Примеры всех запросов можно увидеть в swagger
-
-https://hub.p2pbot.pro/swagger/index.html
+Сайт репки: https://p2pbot.pro/repka
