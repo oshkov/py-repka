@@ -1,4 +1,11 @@
-# <p align="center">PyRepka</p>
+<a href="https://pypi.org/project/pyrepka/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/pypi/v/PyRepka"/></a>
+<a href="https://pypi.org/project/pyrepka/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/pypi/pyversions/pyrepka"/></a>
+<a href="https://p2pbot.pro/repka" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/repka-blue?link=https%3A%2F%2Fp2pbot.pro%2Frepka"/></a>
+
+
+# PyRepka
+
+PyRepka - библиотека для работы с API реферальной программой "Репка"
 
 ### РЕПКА это:
 
@@ -18,7 +25,6 @@
     * [Purchase](#Purchase)
     * [Replenishment](#Replenishment)
 * [Примеры](#Примеры)
-* [Заключение](#Заключение)
 
 
 # Запуск
@@ -232,7 +238,7 @@ from pyrepka import PyRepka
 # Инициализация объекта реферальной программы
 py_repka = PyRepka(bot_access_token, bot_username, ip, port)
 
-@router.callback_query(F.data.contains("/purchase"))
+@router.callback_query(F.data.contains("purchase"))
 async def purchase_handler(callback: CallbackQuery):
 
     # Списывание средств баланса
@@ -258,8 +264,3 @@ async def purchase_handler(callback: CallbackQuery):
             show_alert=True
         )
 ```
-
-
-# Заключение
-
-Сайт репки: https://p2pbot.pro/repka
